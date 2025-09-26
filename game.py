@@ -15,7 +15,7 @@ def next_turn(snake, food, window, score_label, game_state, high_score_label, sa
     elif game_state['direction'] == "right":
         x += SPACE_SIZE
 
-    snake.coordinates.insert(0, (x, y))
+    snake.coordinates.insert(0, [x, y])
     square = window.canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
     snake.squares.insert(0, square)
 
@@ -23,7 +23,7 @@ def next_turn(snake, food, window, score_label, game_state, high_score_label, sa
         game_state['score'] += 1
         score_label.config(text=f"Score: {game_state['score']}")
         window.canvas.delete("food")
-        food.__init__(window.canvas)
+        food.__init__(window.canvas, snake)
     else:
         del snake.coordinates[-1]
         window.canvas.delete(snake.squares[-1])

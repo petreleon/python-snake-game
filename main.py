@@ -68,7 +68,7 @@ if __name__ == "__main__":
         global snake, food
         canvas.delete(tk.ALL)
         snake = Snake(canvas)
-        food = Food(canvas)
+        food = Food(canvas, snake)
         game_state['score'] = 0
         game_state['direction'] = 'down'
         game_state['direction_locked'] = False

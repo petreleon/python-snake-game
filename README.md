@@ -13,7 +13,7 @@ A classic Snake game implemented in Python using the `tkinter` library.
 
 ## Screenshot
 
-![image](https://github.com/user-attachments/assets/15238a6b-1a5c-42e6-9386-311358c31b3a)
+![image](demo.png)
 
 
 ## Requirements
